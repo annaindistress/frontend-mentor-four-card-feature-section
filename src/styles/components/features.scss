@@ -1,0 +1,109 @@
+.features {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    &__item {
+        margin-bottom: 24px;
+
+        &:last-of-type {
+            margin-bottom: 0;
+        }
+    }
+
+    &__card {
+        width: 100%;
+        max-width: 350px;
+        min-height: 222px;
+        margin: 0 auto;
+        padding: 28px;
+        background-color: white;
+        background-repeat: no-repeat;
+        background-position: calc(100% - 28px) calc(100% - 28px);
+        background-size: 57px;
+        border-top: 4px solid currentColor;
+        border-radius: 8px;
+        box-shadow: $shadow;
+
+        &--supervisor {
+            color: $color-primary-cyan;
+            background-image: url('../images/icon-supervisor.svg');
+        }
+
+        &--team {
+            color: $color-primary-red;
+            background-image: url('../images/icon-team-builder.svg');
+        }
+
+        &--karma {
+            color: $color-primary-orange;
+            background-image: url('../images/icon-karma.svg');
+        }
+
+        &--calculator {
+            color: $color-primary-blue;
+            background-image: url('../images/icon-calculator.svg');
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-weight: 600;
+        font-size: 20px;
+        color: $color-title;
+    }
+
+    &__text {
+        margin: 0;
+        font-size: 13px;
+        line-height: 1.77;
+        letter-spacing: 0.09px;
+        color: $color-text;
+    }
+}
+
+@media (min-width: 1200px) {
+    .features {
+        position: relative;
+        width: 1110px;
+        height: 530px;
+        margin: 0 auto;
+
+        &__item {
+            margin: 0;
+        }
+
+        &__card {
+            position: absolute;
+            width: 350px;
+            height: 250px;
+            padding: 32px;
+            background-position: calc(100% - 32px) calc(100% - 32px);
+            background-size: 64px;
+
+            &--supervisor {
+                top: 50%;
+                left: 0;
+                transform: translateY(-50%);
+            }
+
+            &--team {
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &--karma {
+                left: 50%;
+                bottom: 0;
+                transform: translateX(-50%);
+            }
+
+            &--calculator {
+                top: 50%;
+                right: 0;
+                transform: translateY(-50%);
+            }
+        }
+    }
+}
